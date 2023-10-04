@@ -1,6 +1,5 @@
-# Module 6 - Setting up infrastructure for 2Tier web application using Wordpress and MySql database
-While configuring this setup there are multiple steps involved 
-
+# Module 6 - Setting up infrastructure for a 2-tier web application using Wordpress and the MySQL database
+While configuring this setup, there are multiple steps involved.
 # Table of content:
 - [2-Tier Highly Available WordPress Deployment](#2-tier-highly-available-wordpress-deployment)
   - [1. Create an AWS Account](#1-create-an-aws-account)
@@ -15,20 +14,18 @@ While configuring this setup there are multiple steps involved
     - [Other Method: To change your WordPress site URL with the wp-cli](#other-method-to-change-your-wordpress-site-url-with-the-wp-cli)
    
 ## 1. Create an AWS Account
-First you need to create an account on aws ,where you have to setting up your 2Tier web application.
+First, you need to create an account on AWS, where you have to set up your 2-tier web application..
 
 ## Deploy a networking stack
 
-Here we need to configure our network, as per our requirements . I am going to creating logical isolated network environment by the help of VPC .
-
+Here, we need to configure our network as per our requirements. I am going to create a logically isolated network environment with the help of VPC.
 #### VPC-There are multiple steps involved , while creating vpc-
 - Give you vpc name
 - Select IPv4 CIDR block
 - Give your CIDR block size (CIDR block size must be between /16 and /28.)
 ![image](https://github.com/amanravi-squareops/road-to-devops/assets/146931382/da64bd94-f13b-488a-9ca4-2fd2d5b42f96)
 
-After created VPC successfully, Next step is creating subnet , Creating multiple Subnets allows us to create logical network divisions between resources.
-Here i am going to create two subnet named as - 
+After creating the VPC successfully, the next step is creating a subnet. Creating multiple subnets allows us to create logical network divisions between resources. Here, I am going to create two subnets named: - 
   - PublicSubnet1CIDR with 10.10.1.0/24 CIDR
   - PublicSubnet1CIDR with 10.10.2.0/24 CIDR
 
@@ -43,7 +40,7 @@ Here i am going to create two subnet named as -
 
 #### Create your routing table 
 
-Create routing table for our subnet,so that our instance will get public access from internet gateway .
+Create a routing table for our subnet so that our instance will get public access from the internet gateway .
 
 
 
