@@ -16,7 +16,7 @@ While configuring this setup, there are multiple steps involved.
 ## 1. Create an AWS Account
 First, you need to create an account on AWS, where you have to set up your 2-tier web application..
 
-## Deploy a networking stack
+## 2. Deploy a networking stack
 
 Here, we need to configure our network as per our requirements. I am going to create a logically isolated network environment with the help of VPC.
 #### VPC-There are multiple steps involved , while creating vpc-
