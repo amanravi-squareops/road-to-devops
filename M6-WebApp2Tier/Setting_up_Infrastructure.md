@@ -77,7 +77,12 @@ Run this command to install the apache package on ubuntu:
       # systemctl start apache2
 ### Verify Apache Installation 
    - open a web browser and type in the address bar http://server_ip_address
-   - check status of your apache webserver
+   - check the  status of your apache webserver
 
+### Install MySql 
+     # apt-get install mysql-server
+
+### To start your MySQL, run this command:
+    # systemctl start mysql
 
 
