@@ -63,3 +63,21 @@ Now edit your network configuration and attach your vpc and enable Auto-assign p
 
 Create your security group and add inbound security group rules (ssh for remote access and http for webapp), and launch your instance and do ssh.
 
+### SSH for installation PHP , Wordpress and MySql database
+
+#### Open a terminal and run this command:
+      # sudo apt-get update
+      
+### Install Apache
+Run this command to install the apache package on ubuntu:
+
+      # sudo apt-get install apache2
+### Start your Apache webserver
+
+      # systemctl start apache2
+### Verify Apache Installation 
+   - open a web browser and type in the address bar http://server_ip_address
+   - check status of your apache webserver
+
+
+
