@@ -40,8 +40,26 @@ After creating the VPC successfully, the next step is creating a subnet. Creatin
 
 #### Create your routing table 
 
-Create a routing table for our subnet so that our instance will get public access from the internet gateway .
+Create a routing table for our subnet for determine which way to forward traffic.
 
+![image](https://github.com/amanravi-squareops/road-to-devops/assets/146931382/136bfea2-91b5-4ac4-acaa-3090ce7b4619)
 
+#### Create Internet gateway
+Internet gateway allows for internet traffic to actually enter into a VPC.
 
+![image](https://github.com/amanravi-squareops/road-to-devops/assets/146931382/045901b1-a4de-4cf5-bc8c-72f1ce723fd4)
+
+Now attach Internet gateway to our vpc . 
+
+## Now it's time to launch the EC2 instance and attach your VPC to that.
+
+![image](https://github.com/amanravi-squareops/road-to-devops/assets/146931382/39763814-d1c5-47b6-85cd-fa70e55f504d)
+
+Here i am using Redhat image , instance type t2.micro and creating key value pair for secure login .
+
+Now edit your network configuration and attach your vpc and enable Auto-assign public IP.
+
+![image](https://github.com/amanravi-squareops/road-to-devops/assets/146931382/dbaf2dc1-3960-43cf-bf47-dc9146074d41)
+
+Create your security group and add inbound security group rules (ssh for remote access and http for webapp), and launch your instance and do ssh.
 
