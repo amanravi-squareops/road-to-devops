@@ -1,4 +1,4 @@
-# Module 6 - Setting up infrastructure for a 2-tier web application using Wordpress and the MySQL database
+# Module 6 - Setting up infrastructure for a 2-tier web application using Wordpress and the MySQL database in single instance
 While configuring this setup, there are multiple steps involved.
 # Table of content:
 - [2-Tier Highly Available WordPress Deployment](#2-tier-highly-available-wordpress-deployment)
@@ -84,5 +84,40 @@ Run this command to install the apache package on ubuntu:
 
 ### To start your MySQL, run this command:
     # systemctl start mysql
+
+### Change the authentication method
+    # ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'YOUR_STRONG_PASSWORD';
+
+### After executing the ALTER USER command, run the following command:
+    # mysql> FLUSH PRIVILEGES;
+### Installing PHP
+    # sudo apt install php libapache2-mod-php php-mysql
+
+###  Install WordPress On Ubuntu
+    # sudo wget -c http://wordpress.org/latest.tar.gz
+    # sudo tar -xzvf latest.tar.gz
+### Then move the WordPress files
+    # sudo mv wordpress/* /var/www/
+
+### Now set appropriate permissions , It should be owned by the Apache2 user and group called www-data.
+    # sudo chown -R www-data:www-data /var/www/wordpress
+    # sudo chmod -R 775 /var/www/wordpress
+
+###  Create WordPress Database On MySQL
+    mysql> CREATE DATABASE dbname;
+    mysql> CREATE USER 'username'@'%' IDENTIFIED WITH mysql_native_password BY 'db_password';
+    mysql> GRANT ALL ON dbname.* TO 'username'@'%';
+    mysql> FLUSH PRIVILEGES;
+    mysql> EXIT;
+
+###  open the wp-config.php configuration file for editing
+  
+![data](https://github.com/amanravi-squareops/road-to-devops/assets/146931382/b9e27f72-237c-4f61-90d6-979dca21e0be)
+
+    # sudo systemctl restart apache2
+    # sudo systemctl restart mysql
+    
+### Open your web browser, then enter your
+    http://ip_address
 
 
