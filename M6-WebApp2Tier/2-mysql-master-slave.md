@@ -28,7 +28,7 @@
     Position: 157
     Binlog_Do_DB: mydb1
     
-    note down the mysql-bin.000001 value and the Position ID 900. You will need both to set up a slave server.
+    note down the mysql-bin.000005 value and the Position ID 157. You will need both to set up a slave server.
 ### Configure the Slave Node
     uncomment and change the server-id value and follow same steps, whatever you followed while master configuration
     # server-id = 2
