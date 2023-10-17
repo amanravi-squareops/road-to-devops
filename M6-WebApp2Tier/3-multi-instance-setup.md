@@ -5,9 +5,23 @@
     - Security
     - Monitoring
 
-### for installation of wordpress , php and create  mysql replication cluster , refer my repository Readme file.
+### For installation of WordPress, PHP, and MySQL replication clusters, refer to my repository.
 
-Now create EFSand select same vpc where your instance is running.
+### Now, I am going to create a target group for the load balancer. It is used to route requests to one or more registered targets.
+
+<img width="815" alt="image" src="https://github.com/amanravi-squareops/road-to-devops/assets/146931382/b1d62bcd-7d8b-4ce4-b581-1a3efa6a28e8">
+
+#### Target group health status should be Success
+
+### Now, go to the load balancer and create an ALB for the WordPress application.
+
+<img width="812" alt="image" src="https://github.com/amanravi-squareops/road-to-devops/assets/146931382/e83f17ca-9ce8-4641-bc06-28d9a825c86c">
+
+#### Open the DNS link provided by ALB, upload your image, and check that your image is visible on the browser after consecutive refreshes.
+
+Your image is stored in local WordPress storage; now we have to attach EFS to all WordPress applications.
+
+#### Create an EFS and select the same VPC where your instance is running.
 
 <img width="404" alt="image" src="https://github.com/amanravi-squareops/road-to-devops/assets/146931382/aac93b4b-74cb-4241-8edc-5dad5d543e36">
 
@@ -42,7 +56,7 @@ You can refer this doc too - https://docs.aws.amazon.com/efs/latest/ug/installin
     # vim /etc/fstab
     # <dns>:/ /<mount-point>/ nfs4 nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport,_netdev 0 0
 
-### After editing , make sure before reboot, run this command .
+### After editing the fstab file, make sure, before rebooting, to run this command.
     # sudo mount -a
-Now upload your photo on wordpress and paste image url in the browser and refresh and check image present in the browser or not.
 
+Now upload your photo on WordPress, paste the image URL in the browser, and refresh and image is present in the browser or not after consecutive refreshes.
