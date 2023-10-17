@@ -1,3 +1,7 @@
+
+<img width="1000" height="200" alt="image" src="https://github.com/amanravi-squareops/road-to-devops/assets/146931382/e0da4167-eb23-451b-bed4-3702eb72a4bf">
+
+
 # Module 6 - Setting up infrastructure for a 2-tier web application using Wordpress and the MySQL database in single instance
 While configuring this setup, there are multiple steps involved.
 # Table of content:
